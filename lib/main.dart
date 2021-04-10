@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ilk_app/models/student.dart';
 import 'package:flutter_ilk_app/screens/student_add.dart';
+import 'package:flutter_ilk_app/screens/student_edit.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -102,9 +103,7 @@ class _MyAppState extends State<MyApp> {
                   ],
                 ),
                 onPressed: () {
-                  var mesaj = "GÜNCELLENDİ";
-
-                  mesajGoster(context, mesaj);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => StudentEdit(selectedStudent)));
                 },
               ),
             ), Flexible(
